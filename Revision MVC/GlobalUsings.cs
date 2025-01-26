@@ -1,0 +1,9 @@
+﻿global using Microsoft.EntityFrameworkCore;
+global using System.ComponentModel.DataAnnotations;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.AspNetCore.Mvc.Rendering;
+//global using Revision_MVC.Services;
+global using Revision_MVC.Models;
+//global using Revision_MVC.ViewModels;
+global using Revision_MVC.Data;
+//global using Revision_MVC.Settings;
