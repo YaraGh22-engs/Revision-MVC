@@ -8,7 +8,7 @@ namespace Revision_MVC.Models
 
         public Make Make { get; set; }
         // Use a dynamic type or object to hold the model
-        public Enum Model { get; set; }
+        public string ModelName { get; set; } = string.Empty; // Model name as string
 
         public int Year { get; set; }
         public string Color { get; set; } = string.Empty;
@@ -24,11 +24,13 @@ namespace Revision_MVC.Models
         public ICollection<Review> Reviews { get; set; } = new List<Review>();
         public ICollection<Sale> Sales { get; set; } = new List<Sale>();
         public ICollection<UserCar> UserCars { get; set; } = new List<UserCar>();
-        //for dropdown list
-        public List<SelectListItem> Makes { get; set; }
-        public List<SelectListItem> Models { get; set; }
+        public ICollection<Service> Services { get; set; } // Added this navigation property
 
-        
+        //for dropdown list
+        //public List<SelectListItem> Makes { get; set; } 
+        //public List<SelectListItem> Models { get; set; }
+
+
     }
 
     public enum Make

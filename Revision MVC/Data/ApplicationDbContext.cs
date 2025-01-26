@@ -18,9 +18,20 @@ namespace Revision_MVC.Data
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<UserCar>().HasKey(e=>new { e.UserId, e.CarId});
+        { 
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<UserCar>()
+               .HasKey(uc => new { uc.UserId, uc.CarId });
+
+            modelBuilder.Entity<Car>()
+                 .Property(c => c.Make)
+                 .HasConversion<string>()
+                 .IsRequired();
+
+            modelBuilder.Entity<Car>()
+                .Property(c => c.FuelType)
+                .HasConversion<string>()
+                .IsRequired();
         }
     }
 }

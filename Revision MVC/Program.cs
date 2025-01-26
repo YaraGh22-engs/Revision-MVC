@@ -9,7 +9,6 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
-
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
